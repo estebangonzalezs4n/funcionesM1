@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 case object Main {
     //Punto 1, función que recibe dos enteros y con ellos calcula el área de un triángulo rectángulo
-    def areaTrianguloRectangulo: (Int, Int) => Int = (base:Int, altura:Int) => { (base * altura)/2 }
+    def areaTrianguloRectangulo: (Double, Double) => Double = (base:Double, altura:Double) => { (base * altura)/2 }
     //Punto 2, función que recobe un entero y calcula el área de un círculo
     def areaDeUnCirculo: Int => Double = new Function1[Int,Double] {
       def apply(r:Int):Double = {
