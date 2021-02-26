@@ -19,4 +19,47 @@ class MainSpec extends AnyFlatSpec with Matchers {
 
   }
 
+  "El salario con unos devengados de 1000000.0 y unas deducciones de 250000.0" should "es 750000.0" in {
+    val devengados:Double = 1000000.0
+    val deduccioines:Double = 250000.0
+
+    Main.calSalario(devengados, deduccioines) shouldBe 750000.0
+  }
+
+  "El salario con un bono del 10% de unos devengados de 1000000.0 y unas deducciones de 250000.0" should "es 850000" in {
+    val devengados:Double = 1000000.0
+    val deduccioines:Double = 250000.0
+
+    Main.calSalarioBono(devengados, deduccioines) shouldBe 850000.0
+  }
+
+  "Al aplicar la función calSalario con compSalario con unos devengados de 1000000.0 y unas deducciones de 250000.0" should "es 750000.0" in {
+    val devengados: Double = 1000000.0
+    val deduccioines: Double = 250000.0
+
+    Main.compSalario(Main.calSalario, devengados, deduccioines) shouldBe 750000.0
+  }
+
+  "Al aplicar la función calSalarioBono con compSalario con unos devengados de 1000000.0 y unas deducciones de 250000.0" should "es 850000.0" in {
+    val devengados: Double = 1000000.0
+    val deduccioines: Double = 250000.0
+
+    Main.compSalario(Main.calSalarioBono, devengados, deduccioines) shouldBe 850000.0
+  }
+
+  "Al usar la función calSalario5 con unos unos devengados de 1000000.0 y unas deducciones de 250000.0" should " es 800000" in {
+    val devengados: Double = 1000000.0
+    val deduccioines: Double = 250000.0
+
+    Main.calSalario5(devengados, deduccioines) shouldBe 800000
+  }
+
+  "Al usar la función calSalario20 con unos unos devengados de 1000000.0 y unas deducciones de 250000.0" should " es 950000" in {
+    val devengados: Double = 1000000.0
+    val deduccioines: Double = 250000.0
+
+    Main.calSalario20(devengados, deduccioines) shouldBe 950000
+  }
+
+
 }

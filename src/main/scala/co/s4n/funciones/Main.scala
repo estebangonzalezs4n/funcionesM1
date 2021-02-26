@@ -22,7 +22,7 @@ case object Main {
     //Punto 5, función que recibe una función para aplicarsela a dos dobles(devengado y deducciones)
     def compSalario(f:(Double,Double)=>Double, devengado:Double, deducciones:Double): Double = f(devengado,deducciones)
 
-    //Punto 6, función que genera diferentes bonos
+    //Punto 6, función que genera funciones con diferentes bonos
     def genCalSalarioBono(bono:Double):(Double, Double) => Double = {
         (devengado:Double,deducciones:Double) => {
           devengado * bono - deducciones
